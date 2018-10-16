@@ -1,0 +1,28 @@
+page-available-eventos{
+    ion-card{
+        height:300px;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+    }
+
+    .nombre{
+        position: absolute;
+        top: 36%;
+        font-size: 2.5em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .rating{
+        position: absolute;
+        top: 52%;
+        font-size: 2.0em;
+        width: 100%;
+        color: #fff;
+    }
+
+
+}
+ 

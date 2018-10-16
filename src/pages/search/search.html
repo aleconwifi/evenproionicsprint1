@@ -19,8 +19,10 @@
                 <ion-option value="cultural">Cultural</ion-option>
             </ion-select>
         </ion-item>
+
+     
  
-        <ion-item>
+       <ion-item>
             <ion-label><ion-icon name="people"></ion-icon> Invitados</ion-label>
             <ion-select [(ngModel)]="beds">
                 <ion-option value="1">1</ion-option>
@@ -33,26 +35,26 @@
         </ion-item>
  
         <ion-item>
-            <ion-label><ion-icon name="people"></ion-icon> Invitados</ion-label>
+            <ion-label><ion-icon name="clock"></ion-icon> Hora</ion-label>
             <ion-select [(ngModel)]="guests">
-                <ion-option value="1">1</ion-option>
-                <ion-option value="2">2</ion-option>
-                <ion-option value="3">3</ion-option>
-                <ion-option value="4">4</ion-option>
-                <ion-option value="5">5</ion-option>
-                <ion-option value="6">6</ion-option>
-                <ion-option value="7">7</ion-option>
-                <ion-option value="8">8</ion-option>
+                <ion-option value="1">8 AM</ion-option>
+                <ion-option value="2">10 AM</ion-option>
+                <ion-option value="3">12 AM</ion-option>
+                <ion-option value="4">1 PM</ion-option>
+                <ion-option value="5">2 PM</ion-option>
+                <ion-option value="6">3 PM</ion-option>
+                <ion-option value="7">4 PM</ion-option>
+                <ion-option value="8">5 PM</ion-option>
             </ion-select>
         </ion-item>
  
         <ion-item>
-          <ion-label><ion-icon name="clock"></ion-icon> Fecha:</ion-label>
+          <ion-label><ion-icon name="clock"></ion-icon> Desde:</ion-label>
           <ion-datetime displayFormat="DD/MM/YYYY" max="2020-12-31" pickerFormat="DD MM YYYY" [(ngModel)]="from"></ion-datetime>
         </ion-item>
  
         <ion-item>
-          <ion-label><ion-icon name="alarm"></ion-icon> Check out:</ion-label>
+          <ion-label><ion-icon name="alarm"></ion-icon> Hasta :</ion-label>
           <ion-datetime displayFormat="DD/MM/YYYY" max="2020-12-31" pickerFormat="DD MM YYYY" [(ngModel)]="to"></ion-datetime>
         </ion-item>
  

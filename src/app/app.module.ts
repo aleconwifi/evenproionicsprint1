@@ -11,6 +11,7 @@ import { AvailableEventosPage } from '../pages/available-eventos/available-event
 import { BookingPage } from '../pages/booking/booking';
 import { SearchPage } from '../pages/search/search';
 import {HttpModule } from '@angular/http';
+import { ComentariosPage } from '../pages/comentarios/comentarios';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {HttpModule } from '@angular/http';
     HomePage,
     AvailableEventosPage,
     BookingPage,
-    SearchPage
+    SearchPage,
+    ComentariosPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import {HttpModule } from '@angular/http';
     HomePage,
     AvailableEventosPage,
     BookingPage,
-    SearchPage
+    SearchPage,
+    ComentariosPage
   ],
   providers: [
     StatusBar,

@@ -1,21 +1,38 @@
 <ion-header>
   <ion-navbar color="danger">
     <ion-title>
-      Eventos
+      Eventos del dia
     </ion-title>
   </ion-navbar>
 </ion-header>
  
 <ion-content>
+
+   
  
-  <ion-card>
-    <img class="header" src="http://placehold.it/500x500"/>
-  </ion-card>
+
+
+    <ion-slides>
+      <ion-slide *ngFor="let slide of slides">
+         <button  ion-button 
+         block 
+         color="primary"
+         (click)="irCo()">
+         
+         Ver Comentarios</button>
+
+        <img [src]="slide.imagen">
+        <h2>{{slide.titulo}}</h2>
+        <p>{{slide.descripcion}}</p>
+
+        <button (click)="openSearch()" ion-button full color="danger">Buscar un evento</button>
+
+
+      </ion-slide>
+
+    </ion-slides>
+
  
-  <p>
-    Bienvenido <strong>EVENPRO</strong>, esperamos que te diviertas
-  </p>
  
-  <button (click)="openSearch()" ion-button full color="danger">Buscar un evento</button>
  
 </ion-content>

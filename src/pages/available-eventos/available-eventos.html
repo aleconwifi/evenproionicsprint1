@@ -1,6 +1,6 @@
 <ion-header>
  
-  <ion-navbar color="dark">
+  <ion-navbar color="danger">
     <ion-title> Eventos Disponibles</ion-title>
   </ion-navbar>
  
@@ -10,10 +10,15 @@
 <ion-content>
  
   <ion-card tappable (click)="bookEvento(evento)" *ngFor="let evento of eventos">
-      <img class="header" src="http://placehold.it/500x500"/>
+      <img *ngIf="evento.type=='deportivo'" class="header" src="../assets/imgs/defensa.png"/>
+      <img *ngIf="evento.type=='cultural'" class="header" src="../assets/imgs/simon.png"/>
+      <img *ngIf="evento.type=='charlas'" class="header" src="../assets/imgs/mendilloo.png"/>
+      <img *ngIf="evento.type=='autoridades'" class="header" src="../assets/imgs/simon.png"/>
+
+
       <div class="card-title-container">
-        <p class="card-title">{{evento.type}}</p>
-        <p class="evento-description"><ion-icon name="cloud"></ion-icon> {{evento.beds}} <ion-icon name="cash"></ion-icon> {{evento.cost_per_night}} <ion-icon name="people"></ion-icon> {{evento.max_occupancy}}</p>
+        <p class="nombre">{{evento.type}}</p>
+        <p class="rating"><ion-icon name="cloud"></ion-icon>{{evento.beds}} <ion-icon name="cash"></ion-icon> {{evento.cost_per_night}} <ion-icon name="people"></ion-icon> {{evento.max_occupancy}}</p>
       </div>
   </ion-card>
  
