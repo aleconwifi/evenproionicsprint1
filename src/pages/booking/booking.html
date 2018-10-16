@@ -1,0 +1,44 @@
+<ion-header>
+ 
+  <ion-navbar color="danger">
+    <ion-title>{{evento.type}}</ion-title>
+  </ion-navbar>
+ 
+</ion-header>
+ 
+<ion-content>
+ 
+    <ion-card>
+        <img class="header" src="http://placehold.it/500x500"/>
+        <div class="card-title-container">
+            <p class="card-title">{{evento.type}}</p>
+        </div>
+    </ion-card>
+ 
+    <ion-list>
+ 
+        <ion-item>
+            <strong>Fecha de Inicio:</strong> {{checkIn}}
+        </ion-item>
+ 
+        <ion-item>
+            <strong>Fecha Culminacion:</strong> {{checkOut}}
+        </ion-item>
+ 
+        <ion-item>
+            <strong>Cupos disponibles:</strong> {{evento.beds}}
+        </ion-item>
+ 
+        <ion-item>
+            <strong>Invitados:</strong> {{details.guests}}
+        </ion-item>
+ 
+        <ion-item>
+            <strong>Costo:</strong> ${{evento.cost_per_night}}
+        </ion-item>
+ 
+    </ion-list>
+ 
+    <button (click)="book()" full ion-button color="danger">Ir al Evento</button>
+ 
+</ion-content>
