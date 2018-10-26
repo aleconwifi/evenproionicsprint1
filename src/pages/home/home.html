@@ -1,38 +1,35 @@
 <ion-header>
-  <ion-navbar color="danger">
-    <ion-title>
-      Eventos del dia
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar color="danger">
+        <ion-title>
+            Eventos del dia
+        </ion-title>
+    </ion-navbar>
 </ion-header>
- 
+
 <ion-content>
 
-   
- 
+
+
 
 
     <ion-slides>
-      <ion-slide *ngFor="let slide of slides">
-         <button  ion-button 
-         block 
-         color="primary"
-         (click)="irCo()">
+        <ion-slide *ngFor="let slide of slides">
+            <button ion-button block color="primary" (click)="irCo()">
          
          Ver Comentarios</button>
 
-        <img [src]="slide.imagen">
-        <h2>{{slide.titulo}}</h2>
-        <p>{{slide.descripcion}}</p>
+            <img [src]="slide.imagen">
+            <h2>{{slide.titulo}}</h2>
+            <p>{{slide.descripcion}}</p>
 
-        <button (click)="openSearch()" ion-button full color="danger">Buscar un evento</button>
+            <button (click)="openSearch()" ion-button full color="danger">Buscar un evento</button>
 
 
-      </ion-slide>
+        </ion-slide>
 
     </ion-slides>
 
- 
- 
- 
+
+
+
 </ion-content>

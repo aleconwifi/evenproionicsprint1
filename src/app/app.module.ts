@@ -12,6 +12,7 @@ import { BookingPage } from '../pages/booking/booking';
 import { SearchPage } from '../pages/search/search';
 import {HttpModule } from '@angular/http';
 import { ComentariosPage } from '../pages/comentarios/comentarios';
+import { TabsPage } from '../pages/tabs/tabs';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ComentariosPage } from '../pages/comentarios/comentarios';
     AvailableEventosPage,
     BookingPage,
     SearchPage,
-    ComentariosPage
+    ComentariosPage,
+    TabsPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { ComentariosPage } from '../pages/comentarios/comentarios';
     AvailableEventosPage,
     BookingPage,
     SearchPage,
-    ComentariosPage
+    ComentariosPage,
+    TabsPage
   ],
   providers: [
     StatusBar,
