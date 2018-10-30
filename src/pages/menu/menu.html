@@ -1,0 +1,25 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item (click)="openPage(homePage)">
+        Eventos
+      </button>
+            <button ion-item (click)="openPage(SearchPage)">
+        Buscar Eventos
+      </button>
+            <button ion-item (click)="openPage(MostrarComentariosPage)">
+        Comentarios
+      </button>
+            <button ion-item (click)="closeMenu()">
+        Cerrar Menu
+      </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

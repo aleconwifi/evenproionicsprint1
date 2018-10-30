@@ -11,8 +11,15 @@ import { AvailableEventosPage } from '../pages/available-eventos/available-event
 import { BookingPage } from '../pages/booking/booking';
 import { SearchPage } from '../pages/search/search';
 import {HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 import { ComentariosPage } from '../pages/comentarios/comentarios';
 import { TabsPage } from '../pages/tabs/tabs';
+import { ComentariosProvider } from '../providers/comentarios/comentarios';
+import { AgregarComentariosPage } from '../pages/agregar-comentarios/agregar-comentarios';
+import { MostrarComentariosPage } from '../pages/mostrar-comentarios/mostrar-comentarios';
+import { MenuPage } from '../pages/menu/menu';
+import { EventoProvider } from '../providers/evento/evento.service';
 
 @NgModule({
   declarations: [
@@ -23,11 +30,16 @@ import { TabsPage } from '../pages/tabs/tabs';
     BookingPage,
     SearchPage,
     ComentariosPage,
+    AgregarComentariosPage,
+    MostrarComentariosPage,
+    MenuPage,
     TabsPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
+   // CommonModule,
+   // HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -39,13 +51,18 @@ import { TabsPage } from '../pages/tabs/tabs';
     BookingPage,
     SearchPage,
     ComentariosPage,
+    AgregarComentariosPage,
+    MostrarComentariosPage,
+    MenuPage,
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    EventosProvider
+    EventosProvider,
+    EventoProvider,
+    ComentariosProvider
   ]
 })
 export class AppModule {}

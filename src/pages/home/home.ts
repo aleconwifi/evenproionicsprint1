@@ -1,15 +1,20 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, OnInit  } from '@angular/core';
+import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { SearchPage } from '../search/search';
 import { ComentariosPage } from '../comentarios/comentarios';
+import { EventoProvider } from '../../providers/evento/evento.service';
+
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage {
+export class HomePage  {
 
-  //comentarios: any = ComentariosPage;
+  //reviews: any;
+  listaEventos: Object;
+
+  comentarios: any = ComentariosPage;
 
   slides =[{
     titulo: "Comienza a ser un Hackerman",
@@ -37,22 +42,22 @@ export class HomePage {
 
 
 
-  constructor(public nav: NavController) {
+constructor(public navCtrl: NavController, public navParams: NavParams,
+               public modalCtrl: ModalController,public eventosServicio: EventoProvider,) {
+
+                this.listaEventos = eventosServicio.lista;
 
   }
+
+
 
   irCo(){
-    this.nav.push(ComentariosPage);
+    this.navCtrl.push(ComentariosPage);
   }
-
-
-
 
   openSearch(){
-    this.nav.push(SearchPage);
+    this.navCtrl.push(SearchPage);
   }
-
-  
 
 
 }

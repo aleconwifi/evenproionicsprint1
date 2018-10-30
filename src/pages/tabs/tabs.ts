@@ -3,6 +3,8 @@ import { IonicPage } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { ComentariosPage } from '../comentarios/comentarios';
 import { SearchPage } from '../search/search';
+import { AvailableEventosPage } from '../available-eventos/available-eventos';
+import { MostrarComentariosPage } from '../mostrar-comentarios/mostrar-comentarios';
 
 
 /**
@@ -25,7 +27,7 @@ export class TabsPage {
   constructor() {
 
     this.tab1 =HomePage;
-    this.tab2 =ComentariosPage;
+    this.tab2 =MostrarComentariosPage;
     this.tab3 =SearchPage;
 
 
