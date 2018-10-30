@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "3.2.0",
+    "@ionic/cli-plugin-ionic-angular": "1.4.1",
     "@ionic/lab": "1.0.11",
     "typescript": "~2.6.2"
   },

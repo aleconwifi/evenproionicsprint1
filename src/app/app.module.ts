@@ -1,3 +1,4 @@
+import { ScrollPage } from './../pages/scroll/scroll';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -12,7 +13,7 @@ import { BookingPage } from '../pages/booking/booking';
 import { SearchPage } from '../pages/search/search';
 import {HttpModule } from '@angular/http';
 import { ComentariosPage } from '../pages/comentarios/comentarios';
-
+import{ InfinitiveScrollDirective } from '../directives/infinitive-scroll.directive';
 @NgModule({
   declarations: [
     MyApp,
@@ -21,7 +22,9 @@ import { ComentariosPage } from '../pages/comentarios/comentarios';
     AvailableEventosPage,
     BookingPage,
     SearchPage,
-    ComentariosPage
+    ComentariosPage,
+    ScrollPage,
+    InfinitiveScrollDirective
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,8 @@ import { ComentariosPage } from '../pages/comentarios/comentarios';
     AvailableEventosPage,
     BookingPage,
     SearchPage,
-    ComentariosPage
+    ComentariosPage,
+    ScrollPage
   ],
   providers: [
     StatusBar,

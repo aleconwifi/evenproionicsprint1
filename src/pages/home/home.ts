@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { SearchPage } from '../search/search';
+import { ScrollPage } from '../scroll/scroll';
 import { ComentariosPage } from '../comentarios/comentarios';
+//import { Scroll } from '../scroll/scroll';
 
 @Component({
   selector: 'page-home',
@@ -51,7 +53,9 @@ export class HomePage {
   openSearch(){
     this.nav.push(SearchPage);
   }
-
+  openScroll(){
+    this.nav.push(ScrollPage);
+  }
   
 
 
