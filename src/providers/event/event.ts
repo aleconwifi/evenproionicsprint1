@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
   and Angular DI.
 */
 @Injectable()
-export class ComentariosProvider {
+export class EventProvider {
 
   data: any;
 
@@ -18,7 +18,7 @@ export class ComentariosProvider {
     this.data = null;
   }
 
-  getReviews(){
+  getEventos(){
  
     if (this.data) {
       return Promise.resolve(this.data);
@@ -26,7 +26,7 @@ export class ComentariosProvider {
  
     return new Promise(resolve => {
  
-      this.http.get('http://localhost:3000/api/reviews')
+      this.http.get('http://localhost:3000/api/eventos')
         .map(res => res.json())
         .subscribe(data => {
           this.data = data;
@@ -36,21 +36,21 @@ export class ComentariosProvider {
  
   }
  
-  createReview(review){
+  createEvento(evento){
  
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
  
-    this.http.post('http://localhost:3000/api/reviews', JSON.stringify(review), {headers: headers})
+    this.http.post('http://localhost:3000/api/eventos', JSON.stringify(evento), {headers: headers})
       .subscribe(res => {
         console.log(res.json());
       });
  
   }
  
-  deleteReview(id){
+  deleteEvento(id){
  
-    this.http.delete('http://localhost:3000/api/reviews/' + id).subscribe((res) => {
+    this.http.delete('http://localhost:3000/api/evento/' + id).subscribe((res) => {
       console.log(res.json());
     });   
  

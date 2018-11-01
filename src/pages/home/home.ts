@@ -3,6 +3,7 @@ import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { SearchPage } from '../search/search';
 import { ComentariosPage } from '../comentarios/comentarios';
 import { EventoProvider } from '../../providers/evento/evento.service';
+import { MostrarComentariosPage } from '../mostrar-comentarios/mostrar-comentarios';
 
 
 @Component({
@@ -12,27 +13,33 @@ import { EventoProvider } from '../../providers/evento/evento.service';
 export class HomePage  {
 
   //reviews: any;
-  listaEventos: Object;
+  
 
   comentarios: any = ComentariosPage;
 
   slides =[{
-    titulo: "Comienza a ser un Hackerman",
-    descripcion: "Auditorio Polar 1:00 PM",
+    titulo: "Stand Hot: Stand up Comedy",
+    ubicacion: "Auditorio Polar",
+    organizador: "FCE UNIMET",
+    hora: "2:00 PM",
+
     imagen: "../assets/imgs/mendilloo.png",
 
   },
 
   {
-    titulo: "Baja unos kilitos",
-    descripcion: "Jardines frente a gradas 12:00 pm",
+    titulo: "El uso de Drones en la Ingeniería",
+    ubicacion: "Auditorio Manoa",
+    organizador: "CEIC",
+    hora: "9:00 AM",
+
     imagen: "../assets/imgs/defensa.png",
 
   },
 
   {
-    titulo: "Aun no consigues tu media naranja?",
-    descripcion: "Auditorio Manoa 2:00 PM",
+    titulo: "Torneo Interescuelas",
+    descripcion: "Ciudad Deportiva 2:00 PM",
     imagen: "../assets/imgs/simon.png",
 
   },
@@ -45,18 +52,18 @@ export class HomePage  {
 constructor(public navCtrl: NavController, public navParams: NavParams,
                public modalCtrl: ModalController,public eventosServicio: EventoProvider,) {
 
-                this.listaEventos = eventosServicio.lista;
+      
 
   }
 
 
 
   irCo(){
-    this.navCtrl.push(ComentariosPage);
+    this.navCtrl.push(MostrarComentariosPage);
   }
 
   openSearch(){
-    this.navCtrl.push(SearchPage);
+    this.navCtrl.push(MostrarComentariosPage);
   }
 
 

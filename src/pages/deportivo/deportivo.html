@@ -1,0 +1,144 @@
+<ion-header>
+    <ion-navbar color="danger">
+        <ion-buttons left>
+            <button ion-button menuToggle>
+                        <ion-icon name="menu"></ion-icon>
+                    </button>
+        </ion-buttons>
+        <ion-title>
+            Eventos Deportivos
+        </ion-title>
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list no-lines>
+
+        <ion-item-sliding *ngFor="let evento of eventos">
+
+            <ion-item *ngIf="evento.tipo=='Deportivo\n'">
+
+
+
+                <h2>{{evento.nombre}}</h2>
+                <p>{{evento.descripcion}}</p>
+                <p>{{evento.ubicacion}}</p>
+
+
+
+            </ion-item>
+
+        </ion-item-sliding>
+
+    </ion-list>
+
+
+
+</ion-content>
+
+
+
+<ion-content class="cards-bg">
+
+    <ion-card color="danger">
+
+        <img src="assets/img/nin-live.png" />
+
+        <ion-card-content>
+            <ion-card-title>
+                Copa Naranja la Final
+            </ion-card-title>
+
+            <ion-list>
+
+                <ion-item>
+                    <strong>Descripcion:</strong> Final mas esperada
+                </ion-item>
+
+
+                <ion-item>
+                    <strong>Ubicacion:</strong> Canchas UNIMET
+                </ion-item>
+
+                <ion-item>
+                    <strong>Organizador:</strong> Coordinacion Deportiva
+                </ion-item>
+
+
+
+                <ion-item>
+                    <strong>Fecha y hora:</strong> Viernes 25/10/2018 2:00 PM
+                </ion-item>
+
+
+            </ion-list>
+
+
+
+        </ion-card-content>
+
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button clear small color="primary" icon-start>
+              <ion-icon name='star'></ion-icon>
+              Ver Comentarios
+            </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+
+    <ion-card color="danger">
+
+        <img src="assets/img/nin-live.png" />
+
+        <ion-card-content>
+            <ion-card-title>
+                Juegos Interuniversitarios
+            </ion-card-title>
+
+            <ion-list>
+
+                <ion-item>
+                    <strong>Descripcion:</strong> Partidos de basket, futbol, dirigidos a estudiantes unimetanos
+                </ion-item>
+
+
+                <ion-item>
+                    <strong>Ubicacion:</strong> Canchas UNIMET
+                </ion-item>
+
+                <ion-item>
+                    <strong>Organizador:</strong> Coordinacion Deportiva
+                </ion-item>
+
+
+
+                <ion-item>
+                    <strong>Fecha y hora:</strong>20/18/2018 4:00 PM
+                </ion-item>
+
+
+            </ion-list>
+
+
+
+        </ion-card-content>
+
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button clear small color="primary" icon-start>
+              <ion-icon name='star'></ion-icon>
+              Ver Comentarios
+            </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+
+
+
+
+</ion-content>

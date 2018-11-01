@@ -1,0 +1,83 @@
+<ion-header>
+    <ion-navbar color="danger">
+        <ion-buttons right>
+            <button ion-button menuToggle>
+                        <ion-icon name="menu"></ion-icon>
+                    </button>
+        </ion-buttons>
+        <ion-title>
+            Eventos
+        </ion-title>
+
+    </ion-navbar>
+</ion-header>
+
+
+
+<ion-content class="cards-bg">
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-content>
+
+            <ion-refresher (ionRefresh)="doRefresh($event)">
+                <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+                </ion-refresher-content>
+            </ion-refresher>
+
+        </ion-content>
+    </ion-refresher>
+
+    <ion-card color="danger" *ngFor="let evento of eventos">
+
+        <img src="assets/img/nin-live.png" />
+
+        <ion-card-content>
+            <ion-card-title>
+                {{evento.nombre}}
+            </ion-card-title>
+
+            <ion-list>
+
+                <ion-item>
+                    <strong>Descripcion:</strong> {{evento.descripcion}}
+                </ion-item>
+
+
+                <ion-item>
+                    <strong>Ubicacion:</strong> Canchas UNIMET
+                </ion-item>
+
+                <ion-item>
+                    <strong>Organizador:</strong> {{evento.organizador}}
+                </ion-item>
+
+
+
+                <ion-item>
+                    <strong>Fecha y hora:</strong> {{evento.fecha}}
+                </ion-item>
+
+
+            </ion-list>
+
+
+
+        </ion-card-content>
+
+        <ion-row no-padding>
+            <ion-col>
+                <button ion-button clear small color="primary" icon-start (click)="irCo()">
+              <ion-icon name='star'></ion-icon>
+              Ver Comentarios
+            </button>
+            </ion-col>
+        </ion-row>
+
+    </ion-card>
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+
+</ion-content>

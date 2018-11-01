@@ -1,91 +1,26 @@
 <ion-header>
     <ion-navbar color="danger">
-        <ion-title>
-            Eventos del dia
-        </ion-title>
+        <ion-buttons right>
+            <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>Eventos del dia</ion-title>
     </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-    <!-- 
+
     <ion-slides>
         <ion-slide *ngFor="let slide of slides">
-            <button ion-button block color="primary" (click)="irCo()">
-         
-         Ver Comentarios</button>
 
             <img [src]="slide.imagen">
             <h2>{{slide.titulo}}</h2>
             <p>{{slide.descripcion}}</p>
-
-            <button (click)="openSearch()" ion-button full color="danger">Buscar un evento</button>
-
-
+            <button (click)="openSearch()" ion-button full color="danger">Ver opiniones del evento</button>
         </ion-slide>
-
     </ion-slides>
-
--->
-
-    <ion-card *ngFor="let evento of listaEventos">
-        <img *ngIf="evento.tipo=='deportivo'" class="header" src="../assets/imgs/defensa.png" />
-        <img *ngIf="evento.tipo=='cultural'" class="header" src="../assets/imgs/fotografia.png" />
-        <img *ngIf="evento.tipo=='charla'" class="header" src="../assets/imgs/pupi.png" />
-        <img *ngIf="evento.tipo=='autoridades'" class="header" src="../assets/imgs/unimet.jpg" />
-
-
-        <div class="card-title-container">
-            <p class="nombre"> {{evento.nombre}}</p>
-
-        </div>
-    </ion-card>
-
-    <ion-card *ngFor="let evento of listaEventos">
-
-        <ion-item>
-            <ion-avatar item-start>
-                <img src="../assets/imgs/defensa.png">
-            </ion-avatar>
-            <h2> {{evento.nombre}}</h2>
-            <p> {{evento.fecha}}</p>
-        </ion-item>
-
-        <img *ngIf="evento.tipo=='deportivo'" class="header" src="../assets/imgs/defensa.png" />
-        <img *ngIf="evento.tipo=='cultural'" class="header" src="../assets/imgs/fotografia.png" />
-        <img *ngIf="evento.tipo=='charla'" class="header" src="../assets/imgs/pupi.png" />
-        <img *ngIf="evento.tipo=='autoridades'" class="header" src="../assets/imgs/unimet.jpg" />
-
-
-
-        <ion-card-content>
-            <p>{{evento.descripcion}}</p>
-        </ion-card-content>
-
-        <ion-row>
-            <ion-col>
-                <button ion-button icon-start clear small>
-              <ion-icon name="thumbs-up"></ion-icon>
-              <div>12 Likes</div>
-            </button>
-            </ion-col>
-            <ion-col>
-                <button ion-button icon-start clear small>
-              <ion-icon name="text"></ion-icon>
-              <div>4 Comments</div>
-            </button>
-            </ion-col>
-            <ion-col center text-center>
-                <ion-note>
-                    11h ago
-                </ion-note>
-            </ion-col>
-        </ion-row>
-
-    </ion-card>
-
-
-
 
 
 </ion-content>

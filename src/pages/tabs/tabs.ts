@@ -5,6 +5,8 @@ import { ComentariosPage } from '../comentarios/comentarios';
 import { SearchPage } from '../search/search';
 import { AvailableEventosPage } from '../available-eventos/available-eventos';
 import { MostrarComentariosPage } from '../mostrar-comentarios/mostrar-comentarios';
+import { MenuPage } from '../menu/menu';
+import { EventosPage } from '../eventos/eventos';
 
 
 /**
@@ -21,14 +23,17 @@ import { MostrarComentariosPage } from '../mostrar-comentarios/mostrar-comentari
 })
 export class TabsPage {
   tab1: any;
-  tab2: any;
+
   tab3: any;
+  tab4: any;
+  tab5: any;
 
   constructor() {
 
     this.tab1 =HomePage;
-    this.tab2 =MostrarComentariosPage;
-    this.tab3 =SearchPage;
+    this.tab4 =MenuPage;
+    this.tab5 =EventosPage;
+
 
 
 

@@ -20,11 +20,16 @@ import { AgregarComentariosPage } from '../pages/agregar-comentarios/agregar-com
 import { MostrarComentariosPage } from '../pages/mostrar-comentarios/mostrar-comentarios';
 import { MenuPage } from '../pages/menu/menu';
 import { EventoProvider } from '../providers/evento/evento.service';
+import { EventProvider } from '../providers/event/event';
+import { EventosPage } from '../pages/eventos/eventos';
+import { DeportivoPage } from '../pages/deportivo/deportivo';
+import { CulturalPage } from '../pages/cultural/cultural';
+import { AcademicoPage } from '../pages/academico/academico';
+import { AutoridadesPage } from '../pages/autoridades/autoridades';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
     HomePage,
     AvailableEventosPage,
     BookingPage,
@@ -33,6 +38,13 @@ import { EventoProvider } from '../providers/evento/evento.service';
     AgregarComentariosPage,
     MostrarComentariosPage,
     MenuPage,
+    EventosPage,
+
+    DeportivoPage,
+    CulturalPage,
+    AcademicoPage,
+    AutoridadesPage,
+    
     TabsPage
   ],
   imports: [
@@ -54,6 +66,13 @@ import { EventoProvider } from '../providers/evento/evento.service';
     AgregarComentariosPage,
     MostrarComentariosPage,
     MenuPage,
+    EventosPage,
+
+    DeportivoPage,
+    CulturalPage,
+    AcademicoPage,
+    AutoridadesPage,
+    
     TabsPage
   ],
   providers: [
@@ -62,7 +81,9 @@ import { EventoProvider } from '../providers/evento/evento.service';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     EventosProvider,
     EventoProvider,
-    ComentariosProvider
+    ComentariosProvider,
+    EventProvider,
+   
   ]
 })
 export class AppModule {}
